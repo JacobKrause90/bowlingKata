@@ -57,3 +57,39 @@ g.roll(pins);
 //Assert
 REQUIRE(16 == g.scoreGame());
 }
+
+TEST_CASE("One Strike Game Returns Correct Value","[score]")
+{
+//Arrange
+    Game g;
+    int pins = 0;
+
+//Act
+    g.roll(10);
+    g.roll(3);
+    g.roll(4);
+    for(int frame = 0; frame < 16; frame++)
+    {
+        g.roll(pins);
+    }
+//Assert
+    REQUIRE(24 == g.scoreGame());
+}
+
+TEST_CASE("All Strikes Game Returns Correct Value","[score]")
+{
+//Arrange
+    Game g;
+    int pins = 0;
+
+//Act
+    g.roll(10);
+    g.roll(3);
+    g.roll(4);
+    for(int frame = 0; frame < 16; frame++)
+    {
+        g.roll(pins);
+    }
+//Assert
+    REQUIRE(24 == g.scoreGame());
+}
