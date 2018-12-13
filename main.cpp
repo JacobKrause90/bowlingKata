@@ -63,7 +63,6 @@ TEST_CASE("One Strike Game Returns Correct Value","[score]")
 //Arrange
     Game g;
     int pins = 0;
-
 //Act
     g.roll(10);
     g.roll(3);
