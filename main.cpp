@@ -80,16 +80,12 @@ TEST_CASE("All Strikes Game Returns Correct Value","[score]")
 {
 //Arrange
     Game g;
-    int pins = 0;
-
+    int pins = 10;
 //Act
-    g.roll(10);
-    g.roll(3);
-    g.roll(4);
-    for(int frame = 0; frame < 16; frame++)
+    for(int frame = 0; frame < 12; frame++)
     {
         g.roll(pins);
     }
 //Assert
-    REQUIRE(24 == g.scoreGame());
+    REQUIRE(300 == g.scoreGame());
 }
