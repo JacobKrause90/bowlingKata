@@ -7,11 +7,10 @@
 
 
 class Game {
-
+    int score = 0;
 public:
     void roll(int frame);
     int scoreGame();
 };
-
 
 #endif //BOWLINGKATA_GAME_H
